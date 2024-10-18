@@ -10,17 +10,21 @@
   </head>
   <body>
     <main class="w-100">
-      <section class="max-w-[600px] mx-auto mt-16">
-        <h1 id="title" class="text-3xl text-center">
+      <form action="post" id="survey-form">
+        <h1 id="title" class="max-w-[600px] mx-auto mt-16 text-3xl text-center">
           Web Development and Design Enquiries
         </h1>
         <p id="description" class="mt-10 mx-auto pl-9">
           Please fill out the form below to get in touch.<br />
           We'll do our best to reply within 24 hours Mon - Fri.
         </p>
-      </section>
-      <section class="mt-5">
-        <form action="post" id="survey-form">
+        <p>
+          Required fields are followed by
+          <strong><span aria-label="required">*</span></strong
+          >.
+        </p>
+        <section id="contact-info">
+          <h2>Tell us about you</h2>
           <!-- Full name -->
           <p>
             <label for="name">
@@ -37,10 +41,37 @@
             </label>
             <input type="mail" id="email" name="email" required />
           </p>
-          <!--  -->
-        </form>
-      </section>
+          <!-- Current role -->
+          <p>
+            <label for="role">
+              <span>Your current role:</span>
+            </label>
+            <select id="role" name="role">
+              <option value="Director">Director</option>
+              <option value="Freelancer">Freelancer</option>
+              <option value="Developer">Developer</option>
+              <option value="Designer">Designer</option>
+              <option value="Student">Student</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+        </section>
+        <section>
+          <fieldset>
+            <legend>Do you already have a website?</legend>
+
+            <input type="radio" id="no" name="existing-owner" value="no" />
+            <label for="no">Not yet</label><br />
+
+            <input type="radio" id="yes" name="existing-owner" value="yes" />
+            <label for="yes">Yes</label><br />
+          </fieldset>
+          <label for="url"
+            >Enter your url:
+            <input type="url" id="url" name="url" />
+          </label>
+        </section>
+      </form>
     </main>
-    <script src="" async defer></script>
   </body>
 </html>
