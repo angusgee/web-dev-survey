@@ -11,10 +11,10 @@
   <body>
     <main class="w-100">
       <div
-        class="form-wrapper max-w-[600px] mx-auto mt-10 bg-slate-900 text-slate-100 rounded-lg"
+        class="form-wrapper max-w-[600px] mx-auto my-10 bg-slate-900 text-slate-100 rounded-lg"
       >
         <!-- Start of form -->
-        <form action="post" id="survey-form" class="p-2">
+        <form action="post" id="survey-form" class="p-4">
           <!-- Intro section -->
           <h1 id="title" class="mt-10 text-3xl text-center">
             Web Development & Design
@@ -45,6 +45,7 @@
                 name="name"
                 required
                 placeholder="Enter your full name here"
+                class="block w-full rounded-sm"
               />
             </p>
             <!-- Email -->
@@ -59,6 +60,7 @@
                 name="email"
                 required
                 placeholder="Enter your email"
+                class="block w-full rounded-sm"
               />
             </p>
             <!-- Number -->
@@ -73,6 +75,7 @@
                 placeholder="Enter your phone number without any spaces"
                 min="0"
                 max="9999999999"
+                class="block w-full rounded-sm"
               />
             </p>
 
@@ -81,7 +84,11 @@
               <label for="role">
                 <span>Your current role:</span>
               </label>
-              <select id="dropdown" name="role" class="text-slate-900">
+              <select
+                id="dropdown"
+                name="role"
+                class="text-slate-900 block rounded-sm"
+              >
                 <option value="Director">Director</option>
                 <option value="Freelancer">Freelancer</option>
                 <option value="Developer">Developer</option>
@@ -106,7 +113,12 @@
             </fieldset>
             <label for="url"
               >Enter your url:
-              <input type="url" id="url" name="url" />
+              <input
+                type="url"
+                id="url"
+                name="url"
+                class="block w-full rounded-sm"
+              />
             </label>
           </section>
           <!-- Type of help needed -->
