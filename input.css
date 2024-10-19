@@ -9,3 +9,7 @@ body {
 p {
   font-size: large;
 }
+
+input {
+  color: #0f172a;
+}
