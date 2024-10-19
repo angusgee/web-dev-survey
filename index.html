@@ -13,20 +13,22 @@
       <div
         class="form-wrapper max-w-[600px] mx-auto mt-10 bg-slate-900 text-slate-100 rounded-lg"
       >
-        <form action="post" id="survey-form" class="space-y-4 p-2">
+        <form action="post" id="survey-form" class="p-2">
           <h1 id="title" class="mt-10 text-3xl text-center">
-            Web Development and Design Enquiries
+            Web Development & Design
           </h1>
-          <p id="description" class="mt-10 mx-auto">
-            Please fill out the form below to get in touch.<br />
+          <p id="description" class="mt-4">
+            Please fill out the form below to get in touch.
+          </p>
+          <p class="mt-2">
             We'll do our best to reply within 24 hours Mon - Fri.
           </p>
-          <p class="pt-2 text-sm">
+          <p class="text-sm mt-2">
             Required fields are followed by
             <strong><span aria-label="required">*</span></strong
             >.
           </p>
-          <section id="contact-info" class="space-y-4">
+          <section id="contact-info" class="space-y-4 mt-4">
             <h2 class="text-2xl">Tell us about you</h2>
             <!-- Full name -->
             <p>
@@ -59,9 +61,12 @@
               </select>
             </p>
           </section>
+          <!-- Existing website -->
           <section>
-            <fieldset>
-              <legend class="text-xl">Do you already have a website?</legend>
+            <fieldset class="space-y-2">
+              <legend class="text-2xl mt-4">
+                Do you already have a website?
+              </legend>
 
               <input type="radio" id="no" name="existing-owner" value="no" />
               <label for="no">Not yet</label><br />
@@ -73,6 +78,64 @@
               >Enter your url:
               <input type="url" id="url" name="url" />
             </label>
+          </section>
+          <!-- Type of help needed -->
+          <section>
+            <fieldset class="space-y-2">
+              <legend class="text-2xl mt-6">
+                What type of assistance do you require?
+              </legend>
+              <input
+                type="checkbox"
+                id="web-dev"
+                name="web-dev"
+                value="Web Development"
+              />
+              <label for="web-dev"> Web Development</label><br />
+              <input
+                type="checkbox"
+                id="web-design"
+                name="web-design"
+                value="Web Design"
+              />
+              <label for="web-design"> Web Design</label><br />
+              <input
+                type="checkbox"
+                id="hosting"
+                name="hosting"
+                value="Hosting"
+              />
+              <label for="hosting"> Hosting</label><br />
+              <input
+                type="checkbox"
+                id="copy"
+                name="copy"
+                value="Copywriting"
+              />
+              <label for="copy"> Copywriting</label><br />
+            </fieldset>
+          </section>
+          <!-- Text field and submit btn -->
+          <section>
+            <div class="mt-4">
+              <label for="message" class="text-xl">Send us a message: </label>
+              <textarea
+                id="message"
+                name="message"
+                class="block w-full rounded-md mt-2"
+                rows="5"
+                cols="33"
+                placeholder="Please include as many details as possible"
+              ></textarea>
+            </div>
+            <p class="mt-6 mb-4">
+              <button
+                type="submit"
+                class="bg-slate-300 text-slate-900 w-full rounded-md py-2 uppercase font-bold"
+              >
+                Send message
+              </button>
+            </p>
           </section>
         </form>
       </div>
