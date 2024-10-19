@@ -10,68 +10,72 @@
   </head>
   <body>
     <main class="w-100">
-      <form action="post" id="survey-form">
-        <h1 id="title" class="max-w-[600px] mx-auto mt-16 text-3xl text-center">
-          Web Development and Design Enquiries
-        </h1>
-        <p id="description" class="mt-10 mx-auto pl-9">
-          Please fill out the form below to get in touch.<br />
-          We'll do our best to reply within 24 hours Mon - Fri.
-        </p>
-        <p>
-          Required fields are followed by
-          <strong><span aria-label="required">*</span></strong
-          >.
-        </p>
-        <section id="contact-info">
-          <h2>Tell us about you</h2>
-          <!-- Full name -->
-          <p>
-            <label for="name">
-              <span>Full Name: </span>
-              <strong><span aria-label="required">*</span></strong>
-            </label>
-            <input type="text" id="name" name="name" required />
+      <div
+        class="form-wrapper max-w-[600px] mx-auto mt-10 bg-slate-900 text-slate-100 rounded-lg"
+      >
+        <form action="post" id="survey-form" class="space-y-4 p-2">
+          <h1 id="title" class="mt-10 text-3xl text-center">
+            Web Development and Design Enquiries
+          </h1>
+          <p id="description" class="mt-10 mx-auto">
+            Please fill out the form below to get in touch.<br />
+            We'll do our best to reply within 24 hours Mon - Fri.
           </p>
-          <!-- Email -->
-          <p>
-            <label for="email">
-              <span>Email: </span>
-              <strong><span aria-label="required">*</span></strong>
-            </label>
-            <input type="mail" id="email" name="email" required />
+          <p class="pt-2 text-sm">
+            Required fields are followed by
+            <strong><span aria-label="required">*</span></strong
+            >.
           </p>
-          <!-- Current role -->
-          <p>
-            <label for="role">
-              <span>Your current role:</span>
-            </label>
-            <select id="role" name="role">
-              <option value="Director">Director</option>
-              <option value="Freelancer">Freelancer</option>
-              <option value="Developer">Developer</option>
-              <option value="Designer">Designer</option>
-              <option value="Student">Student</option>
-              <option value="Other">Other</option>
-            </select>
-          </p>
-        </section>
-        <section>
-          <fieldset>
-            <legend>Do you already have a website?</legend>
+          <section id="contact-info" class="space-y-4">
+            <h2 class="text-2xl">Tell us about you</h2>
+            <!-- Full name -->
+            <p>
+              <label for="name">
+                <span>Full Name: </span>
+                <strong><span aria-label="required">*</span></strong>
+              </label>
+              <input type="text" id="name" name="name" required />
+            </p>
+            <!-- Email -->
+            <p>
+              <label for="email">
+                <span>Email: </span>
+                <strong><span aria-label="required">*</span></strong>
+              </label>
+              <input type="mail" id="email" name="email" required />
+            </p>
+            <!-- Current role -->
+            <p>
+              <label for="role">
+                <span>Your current role:</span>
+              </label>
+              <select id="role" name="role" class="text-slate-900">
+                <option value="Director">Director</option>
+                <option value="Freelancer">Freelancer</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+                <option value="Student">Student</option>
+                <option value="Other">Other</option>
+              </select>
+            </p>
+          </section>
+          <section>
+            <fieldset>
+              <legend class="text-xl">Do you already have a website?</legend>
 
-            <input type="radio" id="no" name="existing-owner" value="no" />
-            <label for="no">Not yet</label><br />
+              <input type="radio" id="no" name="existing-owner" value="no" />
+              <label for="no">Not yet</label><br />
 
-            <input type="radio" id="yes" name="existing-owner" value="yes" />
-            <label for="yes">Yes</label><br />
-          </fieldset>
-          <label for="url"
-            >Enter your url:
-            <input type="url" id="url" name="url" />
-          </label>
-        </section>
-      </form>
+              <input type="radio" id="yes" name="existing-owner" value="yes" />
+              <label for="yes">Yes</label><br />
+            </fieldset>
+            <label for="url"
+              >Enter your url:
+              <input type="url" id="url" name="url" />
+            </label>
+          </section>
+        </form>
+      </div>
     </main>
   </body>
 </html>
